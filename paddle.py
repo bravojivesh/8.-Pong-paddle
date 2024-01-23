@@ -19,6 +19,7 @@ class Paddle(tu.Turtle):
 
     def down(self):
         self.goto(self.xcor(),self.ycor()-50)
+        print(self.xcor(), self.ycor())
 
 
 
