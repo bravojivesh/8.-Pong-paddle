@@ -25,7 +25,14 @@ screen1.onkey(pad_l.down,"s")
 while eog==False:
     screen1.update()
     ball1.move()
-    time.sleep(0.2)
+    time.sleep(0.1)
 
+    if ball1.ycor() >= 290:#hits the top
+        ball1.bounce_down()
+
+    # if ball1.ycor() <= -290:#hits the bottom
+    #     while ball1.ycor()
+    #     ball1.bounce_up()
+    #     ball1.move()
 
 screen1.exitonclick()
