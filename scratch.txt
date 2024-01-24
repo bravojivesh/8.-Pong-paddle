@@ -1,0 +1,21 @@
+distance to paddle_r is: 30.066592756745816, pad_l distance: 779.0789433683855 and ball xcord is 378.0
+ the xsteps is 18
+ ysteps is -20
+*****BOUNCE*********
+distance to paddle_r is: 22.360679774997898, pad_l distance: 757.099729229908 and ball xcord is 360.0
+ the xsteps is -18
+ ysteps is -20
+*****BOUNCE*********
+distance to paddle_r is: 10.198039027185569, pad_l distance: 770.8203422328708 and ball xcord is 378.0
+ the xsteps is 18
+ ysteps is -20
+*****BOUNCE*********
+distance to paddle_r is: 36.05551275463989, pad_l distance: 749.6665925596525 and ball xcord is 360.0
+ the xsteps is -18
+ ysteps is -20
+*****BOUNCE*********
+distance to paddle_r is: 50.039984012787215, pad_l distance: 764.5678517960325 and ball xcord is 378.0
+ the xsteps is 18
+ ysteps is -20
+
+ JH: SEE HOW THE XCORD HAS A DIFFERENCE OF 18 ALWAYS. BUT THE DISTANCE IS ACTUALLY SHORTER THAN BEFORE.

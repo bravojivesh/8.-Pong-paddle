@@ -29,18 +29,14 @@ while eog==False and ball1.xcor()<400 and ball1.xcor() >-400:
     time.sleep(0.2)
     distance= ball1.distance(pad_r)
     distance1=ball1.distance(pad_l)
-    print (f"distance to paddle_r is: {distance}, pad_l distance: {distance1} and ball xcord is {ball1.xcor()}")
+    print (f"distance to paddle_r is: {distance}, pad_l distance: {distance1} and ball xcord is {ball1.xcor()}\n the xsteps is {ball1.xsteps}\n ysteps is {ball1.ysteps}")
 
-    if ball1.ycor() > 290 or ball1.ycor() <-290: #hits the top
+    if ball1.ycor() > 290 or ball1.ycor() <-290: #hits the top or bottom
         ball1.bounce()
 
-    if (ball1.distance(pad_r) <50 and ball1.xcor() >340) or (ball1.distance(pad_l)<50 and ball1.xcor() < -340):
+    if (ball1.distance(pad_r) <50 and ball1.xcor() >350) or (ball1.distance(pad_l)<50 and ball1.xcor() < -350):
         print ("*****BOUNCE*********")
         ball1.bounce_paddle()
 
-    # if ball1.ycor() <= -290:#hits the bottom
-    #     while ball1.ycor()
-    #     ball1.bounce_up()
-    #     ball1.move()
 
 screen1.exitonclick()
