@@ -1,4 +1,5 @@
 import paddle as pad
+import score
 import turtle as tu
 import ball
 import time
@@ -7,6 +8,8 @@ eog= False
 ball_moving=True
 
 screen1= tu.Screen()
+score1=score.Score()
+
 screen1.bgcolor("black")
 screen1.setup(800,600)
 screen1.listen()
@@ -37,6 +40,9 @@ while eog==False and ball1.xcor()<400 and ball1.xcor() >-400:
     if (ball1.distance(pad_r) <50 and ball1.xcor() >350) or (ball1.distance(pad_l)<50 and ball1.xcor() < -350):
         print ("*****BOUNCE*********")
         ball1.bounce_paddle()
+    elif ball1.xcor()>360 or ball1.xcor() <-360:
+      print (score1)
+
 
 
 screen1.exitonclick()
