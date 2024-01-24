@@ -1,7 +1,9 @@
-#MAIN IS MY VERSION. SCORE WHEN PADDLE HITS. AND IT IS CUMULATIVE. IF OUT OF BOUND, GAME IS OVER.
+#MAIN2 IS THE INSTRUCTOR'S VERSION.
+# POINT WHEN THE OPPONENT MISSES.
+# RESET THE BALL AND GIVE THE OTHER PLAYER THE FIRST CHANCE TO PADDLE
 
 import paddle as pad
-import score
+import score2
 import turtle as tu
 import ball
 import time
@@ -10,7 +12,7 @@ eog= False
 ball_moving=True
 
 screen1= tu.Screen()
-score1=score.Score()
+score1=score2.Score()
 
 screen1.bgcolor("black")
 screen1.setup(800,600)
@@ -40,11 +42,17 @@ while eog==False and ball1.xcor()<400 and ball1.xcor() >-400:
         ball1.bounce()
 
     if (ball1.distance(pad_r) <50 and ball1.xcor() >350) or (ball1.distance(pad_l)<50 and ball1.xcor() < -350):
-        # print ("*****BOUNCE*********")
+        # when hits the paddle
+        #db: print ("*****BOUNCE*********")
         ball1.bounce_paddle()
-        score1.score_update()
-    elif ball1.xcor()>360 or ball1.xcor() <-360:
-        score1.over()
+
+    elif ball1.xcor()>360 or ball1.xcor() <-360: #out of bound
+        # db:print (ball1.xcor())
+        score1.score_update(ball1.xcor())
+        ball1.reset_pos()
+        #because the sequence of the above two lines were wrong, my score_update method was NOT working.
+        # db:print(score1.count_l, score1.count_r)
+
 
 
 

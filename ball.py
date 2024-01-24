@@ -47,7 +47,9 @@ class Ball(tu.Turtle):
 
         self.xsteps *=-1 #steps reverse the direction
 
-
+    def reset_pos(self):
+        self.goto(0,0)
+        self.bounce_paddle()
 
 
 
